@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./src/image/cloud.png">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login - Go Cloud Learning Management System </title>
+</head>
+<body>
+  <header id="header">
+    <nav class="w-100 d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2 justify-content-center">
+        <button type="button" id="sidebar-toggler" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><i class="fa fa-bars"></i></button>
+        <a href="index.html">
+          <img src="./src/image/learning-logo.png" alt="logo" id="logo">
+        </a>
+      </div>
+      <div class="search-wrap">
+        <input type="search" placeholder="Search for anything" class="pl-2 pr-1 py-sm-1">
+        <i class="fa-solid fa-magnifying-glass"></i>
+       </div>
+    <div class="right-menu">
+      <ul class="list-unstyled d-flex gap-2 mt-1">
+        <li>
+          <a href="recently-learning.html" class="btn btn-none">Recent Learning</a>
+        </li>
+        <li>
+          <a href="favorite.html">
+          <button class="btn btn-light rounded-circle"><i class="fa-regular fa-heart"></i></button>
+        </a>
+          </li>
+          <li>
+            <a href="cart-empty.html">
+            <button class="btn btn-light rounded-circle"><i class="fa fa-cart-shopping"></i></button>
+          </a>
+            </li>
+            <li>
+              <button class="btn btn-light rounded-circle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-regular fa-bell"></i></button>
+            </li>
+            <li>
+              <button class="btn btn-dark rounded-circle px-sm-2"><span>AG</span></button>
+            </li>
+      </ul>
+    </div>
+      </nav>
+  </header>
+  <div class="nav-categories border w-100 bg-light hide-span">
+    <div class="container">
+    <ul class="d-flex list-unstyled gap-5 justify-content-center align-items-center pt-sm-1">
+        <li class="categories active py-sm-2 px-sm-2">Information Technology</li>
+        <li class="categories">Web Development</li>
+        <li class="categories">Web Development</li>
+        <li class="categories">Web Development</li>
+        <li class="categories">Web Development</li>
+        <li class="categories">Web Development</li>
+    </ul>
+</div>
+</div>
+  
+<aside class="aside">
+  <div class="offcanvas offcanvas-start width-20" data-bs-scroll="true" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header d-flex justify-content-center">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">        
+         <div class="logo-side d-flex justify-content-center">
+        <img src="./src/image/learning-logo.png" alt="logo" id="logo">
+      </h5>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-unstyled mt-1 d-flex flex-column gap-3 font-weight-regular">
+        <h4 class="font-size-16">Categories</h4>
+        <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+          <i class="fa-solid fa-microchip"></i>
+          <a href="infotech.html" class="text-decoration-none text-dark">Information Technology</a>
+        </li>
+        <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <a href="" class="text-decoration-none text-dark">Business Management</a>
+        </li>
+        <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+          <i class="fa-brands fa-bitcoin"></i>
+          <a href="" class="text-decoration-none text-dark">Crypto currency</a>
+        </li>
+        <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+          <i class="fa-solid fa-pen text-dark"></i>
+          <a href="" class="text-decoration-none text-dark">Creative Designing</a>
+        </li>
+        <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+          <i class="fa-solid fa-code"></i>
+          <a href="" class="text-decoration-none text-dark">Machine Learning</a>
+        </li>
+        <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+          <i class="fa-solid fa-computer"></i>
+          <a href="" class="text-decoration-none text-dark">Web Development</a>
+        </li>
+       </ul>
+      </div>
+    </div>
+  </div>
+</aside>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    ...
+  </div>
+</div>
+  <main>
+   <div class="container">
+    <section class="courses mt-3">
+      <div>
+        <h4 class="font-weight-bold">Information Technology Courses</h4>
+        <h5 class="font-weight-semibold mt-3">Courses to get you started</h5>
+        <ul class="d-flex list-unstyled gap-5 font-weight-semibold mt-1">
+            <li class="border-3 border-bottom border-dark">
+                New
+            </li>
+            <li>
+                Trending
+            </li>
+            <li>
+                Recent
+            </li>
+        </ul>
+      </div>
+      
+      <div class="cards d-grid grid-row-5 gap-3">
+        <div class="card-course d-flex flex-column ">
+          <a href="courses.html" class="text-decoration-none">
+          <div class="card-header ">
+            <img src="./src/image/card-1.png">
+          </div>
+          <div class="card-body">
+            <p class="title font-weight-semibold">Mobile app Development 2023 Full crash course</p>
+            <small class="text-muted">Dianne Ong</small>
+            <div >
+              <span class="text-muted">4.5</span>
+              <span class="text-primary">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-alt"></i>
+            </span>
+              <span class="text-muted">(2,001)</span>
+            </div>
+          </div>
+          <div class="card-footer border-0">
+             <button class="btn btn-primary">Start now</button>
+          </div>
+        </a>
+        </div>
+
+        <div class="card-course d-flex flex-column ">
+            <div class="card-header ">
+              <img src="./src/image/card-1.png">
+            </div>
+            <div class="card-body">
+              <p class="title font-weight-semibold">Mobile app Development 2023 Full crash course</p>
+              <small class="text-muted">Dianne Ong</small>
+              <div >
+                <span class="text-muted">4.5</span>
+                <span class="text-primary">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-alt"></i>
+              </span>
+                <span class="text-muted">(2,001)</span>
+              </div>
+            </div>
+            <div class="card-footer border-0">
+               <button class="btn btn-primary">Start now</button>
+            </div>
+          </div>
+
+          <div class="card-course d-flex flex-column ">
+            <div class="card-header ">
+              <img src="./src/image/card-1.png">
+            </div>
+            <div class="card-body">
+              <p class="title font-weight-semibold">Mobile app Development 2023 Full crash course</p>
+              <small class="text-muted">Dianne Ong</small>
+              <div >
+                <span class="text-muted">4.5</span>
+                <span class="text-primary">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-alt"></i>
+              </span>
+                <span class="text-muted">(2,001)</span>
+              </div>
+            </div>
+            <div class="card-footer border-0">
+               <button class="btn btn-primary">Start now</button>
+            </div>
+          </div>
+
+        </div>
+        <div id="learn-next-section" class="mt-5 mb-2 py-2">
+            <h4 class="mb-2">Featured Course</h4>
+            <div class="row p-1 border">
+              <div class="col-sm-6">
+                <div class="image-container">
+               <img src="./src/image/web-image.png" alt="web-image" class="w-100 h-100">
+               <div class="overlay"></div>
+              <button class="button btn btn-light btn-lg rounded-circle"><i class="fa-solid fa-play"></i></button>
+            </div>
+              </div>
+              <div class="col-sm-6">
+                <h4 class="font-weight-semibold font-size-28">Web development Html, Css , Javascript PHP Full course</h4>
+                <small class="text-muted font-size-16">is a comprehensive online course that covers the fundamentals of building interactive and dynamic 
+                  web applications using HTML, CSS, JavaScript, and PHP. This course is ideal for anyone who is interested in learning
+                   how to develop websites from scratch and wants to gain a strong understanding of the core concepts and technologies used
+                    in web development.</small>
+                   <div class="learn-card-footer mt-1">
+                    <h5 class="mt-2 font-size-24">Jayson Chin</h5>
+                    <span class="text-muted">4.5</span>
+                    <span class="text-primary">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-alt"></i>
+                  </span>
+                    <span class="text-muted">(2,001)</span>
+    
+                    <div class="d-flex gap-4 mt-1 align-content-center">
+                      <div class="d-flex gap-2">
+                      <i class="fa-regular fa-clock"></i>
+                      <small class="font-weight-semibold">1,244 hrs</small>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <i class="fa-solid fa-book-open"></i>
+                      <small class="font-weight-semibold">13 Lessons</small>
+                    </div>
+                    </div>
+    
+                    <div class="d-flex gap-5 mt-1 align-content-center">
+                      <div class="d-flex gap-2">
+                        <i class="fa-solid fa-peso-sign"></i>
+                      <small class="font-weight-semibold">1,500</small>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <i class="fa-regular fa-user"></i>
+                      <small class="font-weight-semibold">2,000 Users</small>
+                    </div>
+                    </div>
+                    
+                  </div>
+                   </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="popular-topics">
+         <div class="container">
+            <div class="topics">
+                <h4 class="font-weight-regular mb-2">Popular Topics</h4>
+                <div class="d-grid grid-row-4 gap-2">
+                    <span class="border border-dark d-flex justify-content-center py-1 span-hover">
+                        <a class="btn btn-none font-weight-semibold">Web Development</a>
+                    </span>
+                    <span class="border border-dark d-flex justify-content-center py-1 span-hover">
+                        <a class="btn btn-none font-weight-semibold">Web Development</a>
+                    </span>
+                    <span class="border border-dark d-flex justify-content-center py-1 span-hover">
+                        <a class="btn btn-none font-weight-semibold">Web Development</a>
+                    </span>
+                    <span class="border border-dark d-flex justify-content-center py-1 span-hover">
+                        <a class="btn btn-none font-weight-semibold">Web Development</a>
+                    </span>
+                    <span class="border border-dark d-flex justify-content-center py-1 span-hover">
+                        <a class="btn btn-none font-weight-semibold">Web Development</a>
+                    </span>
+                    <span class="border border-dark d-flex justify-content-center py-1 span-hover">
+                        <a class="btn btn-none font-weight-semibold">Web Development</a>
+                    </span>
+                </div>
+            </div>
+         </div>
+        </div>
+
+        <div id="popular-instructor" class="mt-5 mb-2">
+            <div class="container">
+                <h4 class="mb-2">Popular Instructor</h4>
+                <div class="d-grid grid-row-4 gap-2">
+                    <div class="border border-dark d-flex justify-content-center py-1 span-hover">
+                       <div class="row gap-1 w-100">
+                        <div class="col-3">
+                        <img src="./src/image/person-icon2.jpg" alt="preson-icon" class="person-icon">
+                        </div>
+                        <div class="col-8">
+                          <h6 class="font-weight-bold">Jayson Chua</h6>
+                          <small>Data Science Instructor</small>
+                          <div >
+                            <span class="text-muted">4.5</span>
+                            <span class="text-primary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-alt"></i>
+                          </span>
+                          </div>
+                          <span class="font-weight-semibold font-size-14">2,002,000 Students</span>
+                        </div>
+                       </div>
+                    </div>
+                    <div class="border border-dark d-flex justify-content-center py-1 span-hover">
+                        <div class="row gap-1 w-100">
+                         <div class="col-3">
+                         <img src="./src/image/preson-icon.jpg" alt="preson-icon" class="person-icon">
+                         </div>
+                         <div class="col-8">
+                           <h6 class="font-weight-bold">Jayson Chua</h6>
+                           <small>Data Science Instructor</small>
+                           <div >
+                             <span class="text-muted">4.5</span>
+                             <span class="text-primary">
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star-half-alt"></i>
+                           </span>
+                           </div>
+                           <span class="font-weight-semibold font-size-14">2,002,000 Students</span>
+                         </div>
+                        </div>
+                     </div>
+                     <div class="border border-dark d-flex justify-content-center py-1 span-hover">
+                        <div class="row gap-1 w-100">
+                         <div class="col-3">
+                         <img src="./src/image/person-icon3.jpg" alt="preson-icon" class="person-icon">
+                         </div>
+                         <div class="col-8">
+                           <h6 class="font-weight-bold">Jayson Chua</h6>
+                           <small>Data Science Instructor</small>
+                           <div >
+                             <span class="text-muted">4.5</span>
+                             <span class="text-primary">
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star-half-alt"></i>
+                           </span>
+                           </div>
+                           <span class="font-weight-semibold font-size-14">2,002,000 Students</span>
+                         </div>
+                        </div>
+                     </div>
+            </div>
+        </div>
+
+
+    </section>
+   </div>
+  </main>
+  <script src="./src/js/app.js"></script>
+   <script src="./src/sass/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

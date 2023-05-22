@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./src/image/cloud.png">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login - Go Cloud Learning Management System </title>
+</head>
+<body>
+  <header id="header">
+    <nav class="w-100 d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-4 justify-content-center">
+        <img src="./src/image/bars.png" id="bars-icon" type="button" id="sidebar-toggler" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+        <a href="index.html">
+          <img src="./src/image/learning-logo.png" alt="logo" id="logo">
+        </a>
+      </div>
+ 
+    <div class="right-menu">
+      <ul class="list-unstyled d-flex gap-2 mt-1">
+        <li>
+            <a href="favorite.html">
+                <button class="btn btn-light rounded-circle"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </a>
+        </li>
+        
+          <li>
+            <a href="cart-empty.html">
+            <button class="btn btn-light rounded-circle"><i class="fa-solid fa-envelope"></i></button>
+          </a>
+            </li>
+            <li>
+              <button class="btn btn-light rounded-circle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-regular fa-bell"></i></button>
+            </li>
+            <li>
+              <div class="user-wrapper">
+                <button class="btn btn-dark rounded-circle px-sm-2"><span>AG</span></button>
+              </div>
+            </li>
+      </ul>
+    </div>
+      </nav>
+  </header>
+  
+  <aside class="aside">
+    <div class="offcanvas offcanvas-start width-20" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header d-flex justify-content-center">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">        
+           <div class="logo-side d-flex justify-content-center">
+          <img src="./src/image/learning-logo.png" alt="logo" id="logo">
+        </h5>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-unstyled mt-1 d-flex flex-column gap-3 font-weight-regular">
+          <h4 class="font-size-16">Categories</h4>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-solid fa-microchip"></i>
+            <a href="infotech.html" class="text-decoration-none text-dark">Information Technology</a>
+          </li>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <a href="" class="text-decoration-none text-dark">Business Management</a>
+          </li>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-brands fa-bitcoin"></i>
+            <a href="" class="text-decoration-none text-dark">Crypto currency</a>
+          </li>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-solid fa-pen text-dark"></i>
+            <a href="" class="text-decoration-none text-dark">Creative Designing</a>
+          </li>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-solid fa-code"></i>
+            <a href="" class="text-decoration-none text-dark">Machine Learning</a>
+          </li>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-solid fa-computer"></i>
+            <a href="" class="text-decoration-none text-dark">Web Development</a>
+          </li>
+         </ul>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      ...
+    </div>
+  </div>
+
+  <main>
+    <div class="banner">
+    <div class="container">
+   <div class="row background-card-gray mt-2 rounded-2">
+    <div class="col-sm-7">
+       <div class="d-flex flex-column h-100 justify-content-center align-items-start p-2">
+        <h2 class="font-size-46 font-weight-bold">Hello, Mr. Angelo Guiao</h2>
+        <p class="text-muted font-size-20">Let’s start teaching with the use of internet</p>
+        <button class="btn btn-primary btn-md">Create new course</button>
+       </div>
+    </div>
+    <div class="col-sm-5 d-flex justify-content-center align-content-center">
+        <img src="./src/image/card-cover/card-cover-2.png" alt="card-cover-image" class="card-cover-image">
+    </div>
+   </div>
+</div>
+</div>
+   <div class="container">
+   <div class="card-resources d-grid grid-row-5 gap-4 mt-4">
+         <div class="card-resource">
+            <div class="card-resource-body text-align-center shadow rounded-2 w-100 h-100 p-2 ">
+                <h4 class="font-size-36 font-weight-semibold">30+</h4>
+                <h5 class="font-size-34 font-weight-regular">Students</h5>
+            </div>
+         </div>
+         <div class="card-resource">
+            <div class="card-resource-body text-align-center  shadow rounded-2 w-100 h-100 p-2 ">
+                <h4 class="font-size-36 font-weight-semibold">4</h4>
+                <h5 class="font-size-34 font-weight-regular">Courses</h5>
+            </div>
+         </div>
+         <div class="card-resource">
+            <div class="card-resource-body text-align-center shadow rounded-2 w-100 h-100 p-2 ">
+                <h4 class="font-size-36 font-weight-semibold">$4k+</h4>
+                <h5 class="font-size-34 font-weight-regular">Revenue</h5>
+            </div>
+         </div>
+         <div class="card-resource">
+            <div class="card-resource-body text-align-center shadow rounded-2 w-100 h-100 p-2 ">
+                <h4 class="font-size-36 font-weight-semibold">100</h4>
+                <h5 class="font-size-34 font-weight-regular">Feedbacks</h5>
+            </div>
+         </div>
+   </div>
+</div>
+
+<section id="top-course" class="mt-4">
+    <div class="container">
+        <h4 class="mb-1">Your top course</h4>
+        <div class="row p-1 border">
+          <div class="col-lg-6">
+            <div class="image-container">
+           <img src="./src/image/web-image.png" alt="web-image" class="w-100 h-100">
+           <div class="overlay"></div>
+          <button class="button btn btn-light btn-lg rounded-circle"><i class="fa-solid fa-play"></i></button>
+        </div>
+          </div>
+          <div class="col-lg-6">
+            <h4 class="font-weight-semibold font-size-28">Web development Html, Css , Javascript PHP Full course</h4>
+            <small class="text-muted font-size-16">is a comprehensive online course that covers the fundamentals of building interactive and dynamic 
+              web applications using HTML, CSS, JavaScript, and PHP. This course is ideal for anyone who is interested in learning
+               how to develop websites from scratch and wants to gain a strong understanding of the core concepts and technologies used
+                in web development.</small>
+               <div class="learn-card-footer mt-1">
+                <h5 class="mt-2 font-size-24">Jayson Chin</h5>
+                <span class="text-muted">4.5</span>
+                <span class="text-primary">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-alt"></i>
+              </span>
+                <span class="text-muted">(2,001)</span>
+
+                <div class="d-flex gap-4 mt-1 align-content-center">
+                  <div class="d-flex gap-2">
+                  <i class="fa-regular fa-clock"></i>
+                  <small class="font-weight-semibold">1,244 hrs</small>
+                </div>
+                <div class="d-flex gap-2">
+                  <i class="fa-solid fa-book-open"></i>
+                  <small class="font-weight-semibold">13 Lessons</small>
+                </div>
+                </div>
+
+                <div class="d-flex gap-5 mt-1 align-content-center">
+                  <div class="d-flex gap-2">
+                    <i class="fa-solid fa-peso-sign"></i>
+                  <small class="font-weight-semibold">1,500</small>
+                </div>
+                <div class="d-flex gap-2">
+                  <i class="fa-regular fa-user"></i>
+                  <small class="font-weight-semibold">2,000 Users</small>
+                </div>
+                </div>
+                
+              </div>
+               </div>
+          </div>
+    </div>
+</section>
+  </main>
+  <script src="./src/js/app.js"></script>
+   <script src="./src/sass/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

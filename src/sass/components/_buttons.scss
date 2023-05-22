@@ -1,0 +1,21 @@
+#sidebar-toggler{
+    background:none;
+    border:none;
+    cursor: pointer;
+
+    i{
+        font-size:16px !important;
+        padding: 5px 7px;
+    }
+
+    &:hover{
+      background: var(--color-card-tint);
+      border-radius: 50%;
+    }
+}
+
+
+#facebook-med:hover{
+  background: var(--color-light);
+  cursor: pointer;
+}

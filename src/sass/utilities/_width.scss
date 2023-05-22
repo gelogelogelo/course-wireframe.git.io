@@ -1,0 +1,17 @@
+
+
+$widths: (
+    "xs": 10%,
+    "sm": 20%,
+    "md": 30%,
+    "lg": 50%,
+    "xl": 70%,
+    "full": 100%
+  
+);
+
+@each $name, $width in $widths {
+    .width-#{$name} {
+        width: $width;
+    }
+}

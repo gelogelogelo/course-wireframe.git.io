@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./src/image/cloud.png">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login - Go Cloud Learning Management System </title>
+</head>
+<body>
+  <header id="header">
+    <nav class="w-100 d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2 justify-content-center">
+        <button type="button" id="sidebar-toggler" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><i class="fa fa-bars"></i></button>
+        <a href="index.html">
+          <img src="./src/image/learning-logo.png" alt="logo" id="logo">
+        </a>
+      </div>
+      <div class="search-wrap">
+        <input type="search" placeholder="Search for anything" class="pl-2 pr-1 py-sm-1">
+        <i class="fa-solid fa-magnifying-glass"></i>
+       </div>
+    <div class="right-menu">
+      <ul class="list-unstyled d-flex gap-2 mt-1">
+        <li>
+          <a href="recently-learning.html" class="btn btn-none">Recent Learning</a>
+        </li>
+        <li>
+          <a href="favorite.html">
+          <button class="btn btn-light rounded-circle"><i class="fa-regular fa-heart"></i></button>
+        </a>
+          </li>
+          <li>
+            <a href="cart-empty.html">
+            <button class="btn btn-light rounded-circle"><i class="fa fa-cart-shopping"></i></button>
+          </a>
+            </li>
+            <li>
+              <button class="btn btn-light rounded-circle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-regular fa-bell"></i></button>
+            </li>
+            <li>
+              <button class="btn btn-dark rounded-circle px-sm-2"><span>AG</span></button>
+            </li>
+      </ul>
+    </div>
+      </nav>
+  </header>
+  
+  <aside class="aside">
+    <div class="offcanvas offcanvas-start width-20" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header d-flex justify-content-center">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">        
+           <div class="logo-side d-flex justify-content-center">
+          <img src="./src/image/learning-logo.png" alt="logo" id="logo">
+        </h5>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-unstyled mt-1 d-flex flex-column gap-3 font-weight-regular">
+          <h4 class="font-size-16">Categories</h4>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-solid fa-microchip"></i>
+            <a href="infotech.html" class="text-decoration-none text-dark">Information Technology</a>
+          </li>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <a href="" class="text-decoration-none text-dark">Business Management</a>
+          </li>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-brands fa-bitcoin"></i>
+            <a href="" class="text-decoration-none text-dark">Crypto currency</a>
+          </li>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-solid fa-pen text-dark"></i>
+            <a href="" class="text-decoration-none text-dark">Creative Designing</a>
+          </li>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-solid fa-code"></i>
+            <a href="" class="text-decoration-none text-dark">Machine Learning</a>
+          </li>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-solid fa-computer"></i>
+            <a href="" class="text-decoration-none text-dark">Web Development</a>
+          </li>
+         </ul>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      ...
+    </div>
+  </div>
+
+  <main>
+    <section id="instructor-info" class="mt-2">
+        <div class="container">
+     <div class="row">
+        <div class="col-md-6">
+              <div>
+                <h4 class="text-muted font-size-16 font-weight-extrabold">INSTRUCTOR</h4>
+                <h2 class="font-weight-extrabold font-size-44">Angelo Guiao</h2>
+                <small class="bg-info text-white p-sm-1 px-sm-3">Certified Professional Teacher</small>
+              </div>
+              <div class="d-flex gap-4 mt-1">
+               <div class="total-reviews">
+                <small class="font-weight-bold text-muted font-size-14">Total Reviews</small>
+                <p class="font-weight-bold font-size-24">3,200,111</p>
+               </div>
+               <div class="total-students">
+                <small class="font-weight-bold text-muted font-size-14">Total Students</small>
+                <p class="font-weight-bold font-size-24">4,200,111</p>
+               </div>
+              </div>
+              <div >
+                <h4 class="text-muted font-size-16 font-weight-extrabold">About me</h4>
+                <p class="lh-4 font-size-14">
+                    Angelo M. Guiao is a highly accomplished individual with a solid educational background in Mechanical Engineering. He holds both a Bachelor's and Master's degree in Mechanical Engineering from Santa Clara University. With extensive experience as a professional instructor and trainer, Angelo specializes in teaching Data Science, Machine Learning, and Python Programming.
+                    In addition to his academic achievements, Angelo has made notable contributions to various fields, including microfluidics, materials science, and data science. He has published research papers and holds patents in these areas, showcasing his expertise and multidisciplinary knowledge.
+                    Utilizing his vast experience, Angelo has developed exceptional skills in data analysis. His passion lies in sharing his knowledge and expertise in programming, data analysis, and creating visually appealing data visualizations with oth
+                    Currently, Angelo serves as the Head of Data Science at Pierian Training, a renowned organization that offers comprehensive training courses in data science and Python programming. He is responsible for delivering in-person training sessions to employees at top companies such as General Electric, Cigna, SalesForce, Starbucks, McKinsey, and many more. For detailed information about the training programs offered, please visit the provided website link.</p>
+            </div>
+
+          <div class="mt-4">
+                <h5 class="text-muted mb-1">My courses <span>(5)</span></h5>
+                <div class="d-grid grid-row-5">
+                <div class="card-course d-flex flex-column mb-1">
+                    <div class="card-header ">
+                      <img src="./src/image/card-1.png">
+                    </div>
+                    <div class="card-body">
+                      <p class="title font-weight-semibold">Mobile app Development 2023 Full crash course</p>
+                      <small class="text-muted">Dianne Ong</small>
+                      <div >
+                        <span class="text-muted">4.5</span>
+                        <span class="text-primary">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                      </span>
+                        <span class="text-muted">(2,001)</span>
+                      </div>
+                    </div>
+                    <div class="card-footer border-0">
+                       <button class="btn btn-primary">Start now</button>
+                    </div>
+                  </div>
+                  <div class="card-course d-flex flex-column mb-1">
+                    <div class="card-header ">
+                      <img src="./src/image/card-1.png">
+                    </div>
+                    <div class="card-body">
+                      <p class="title font-weight-semibold">Mobile app Development 2023 Full crash course</p>
+                      <small class="text-muted">Dianne Ong</small>
+                      <div >
+                        <span class="text-muted">4.5</span>
+                        <span class="text-primary">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                      </span>
+                        <span class="text-muted">(2,001)</span>
+                      </div>
+                    </div>
+                    <div class="card-footer border-0">
+                       <button class="btn btn-primary">Start now</button>
+                    </div>
+                  </div>
+                  <div class="card-course d-flex flex-column mb-1">
+                    <div class="card-header ">
+                      <img src="./src/image/card-1.png">
+                    </div>
+                    <div class="card-body">
+                      <p class="title font-weight-semibold">Mobile app Development 2023 Full crash course</p>
+                      <small class="text-muted">Dianne Ong</small>
+                      <div >
+                        <span class="text-muted">4.5</span>
+                        <span class="text-primary">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                      </span>
+                        <span class="text-muted">(2,001)</span>
+                      </div>
+                    </div>
+                    <div class="card-footer border-0">
+                       <button class="btn btn-primary">Start now</button>
+                    </div>
+                  </div>
+                  <div class="card-course d-flex flex-column mb-1">
+                    <div class="card-header ">
+                      <img src="./src/image/card-1.png">
+                    </div>
+                    <div class="card-body">
+                      <p class="title font-weight-semibold">Mobile app Development 2023 Full crash course</p>
+                      <small class="text-muted">Dianne Ong</small>
+                      <div >
+                        <span class="text-muted">4.5</span>
+                        <span class="text-primary">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                      </span>
+                        <span class="text-muted">(2,001)</span>
+                      </div>
+                    </div>
+                    <div class="card-footer border-0">
+                       <button class="btn btn-primary">Start now</button>
+                    </div>
+                  </div>
+
+                  <div class="card-course d-flex flex-column mb-1">
+                    <div class="card-header ">
+                      <img src="./src/image/card-1.png">
+                    </div>
+                    <div class="card-body">
+                      <p class="title font-weight-semibold">Mobile app Development 2023 Full crash course</p>
+                      <small class="text-muted">Dianne Ong</small>
+                      <div >
+                        <span class="text-muted">4.5</span>
+                        <span class="text-primary">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                      </span>
+                        <span class="text-muted">(2,001)</span>
+                      </div>
+                    </div>
+                    <div class="card-footer border-0">
+                       <button class="btn btn-primary">Start now</button>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+        <div class="col-md-6 d-flex flex-column align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center">
+                <img src="./src/image/person-icon3.jpg" class="person-icon-lg">
+            </div>
+            <div class="socmed d-flex align-content-center justify-content-center w-50 border border-2 border-dark p-sm-1">
+             <span class="d-flex gap-2 "><i class="fa-brands fa-facebook font-size-28"></i>
+              <h4 class="font-size-16 mt-sm-1">Facebook</h4>
+            </span>
+            </div>
+            <div class="socmed d-flex align-content-center justify-content-center w-50  border border-2 border-dark p-sm-1">
+                <span class="d-flex gap-2 "><i class="fa-brands fa-github font-size-28"></i>
+                 <h4  class="font-size-16 mt-sm-1">Github</h4>
+               </span>
+               </div>
+               <div class="socmed d-flex align-content-center justify-content-center w-50  border border-2 border-dark p-sm-1">
+                <span class="d-flex gap-2 "><i class="fa-brands fa-instagram font-size-28"></i>
+                 <h  class="font-size-16 mt-sm-1">Instagram</h4>
+               </span>
+               </div>
+        </div>
+     </div>
+    </div>
+    </section>
+  </main>
+  <script src="./src/js/app.js"></script>
+   <script src="./src/sass/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

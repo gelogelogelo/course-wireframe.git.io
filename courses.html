@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./src/image/cloud.png">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login - Go Cloud Learning Management System </title>
+</head>
+<body>
+  <header id="header">
+    <nav class="w-100 d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2 justify-content-center">
+        <button type="button" id="sidebar-toggler" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><i class="fa fa-bars"></i></button>
+        <a href="index.html">
+          <img src="./src/image/learning-logo.png" alt="logo" id="logo">
+        </a>
+      </div>
+      <div class="search-wrap">
+        <input type="search" placeholder="Search for anything" class="pl-2 pr-1 py-sm-1">
+        <i class="fa-solid fa-magnifying-glass"></i>
+       </div>
+    <div class="right-menu">
+      <ul class="list-unstyled d-flex gap-2 mt-1">
+        <li>
+          <a href="recently-learning.html" class="btn btn-none">Recent Learning</a>
+        </li>
+        <li>
+          <a href="favorite.html">
+          <button class="btn btn-light rounded-circle"><i class="fa-regular fa-heart"></i></button>
+        </a>
+          </li>
+          <li>
+            <a href="cart-empty.html">
+            <button class="btn btn-light rounded-circle"><i class="fa fa-cart-shopping"></i></button>
+          </a>
+            </li>
+            <li>
+              <button class="btn btn-light rounded-circle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-regular fa-bell"></i></button>
+            </li>
+            <li>
+              <button class="btn btn-dark rounded-circle px-sm-2"><span>AG</span></button>
+            </li>
+      </ul>
+    </div>
+      </nav>
+  </header>
+  <aside class="aside" >
+    <div class="offcanvas offcanvas-start width-20" data-bs-scroll="true" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header d-flex justify-content-center">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">        
+           <div class="logo-side d-flex justify-content-center">
+          <img src="./src/image/learning-logo.png" alt="logo" id="logo">
+        </h5>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-unstyled mt-1 d-flex flex-column gap-3 font-weight-regular">
+          <h4 class="font-size-16">Categories</h4>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-solid fa-microchip"></i>
+            <a href="infotech.html" class="text-decoration-none text-dark">Information Technology</a>
+          </li>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <a href="" class="text-decoration-none text-dark">Business Management</a>
+          </li>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-brands fa-bitcoin"></i>
+            <a href="" class="text-decoration-none text-dark">Crypto currency</a>
+          </li>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-solid fa-pen text-dark"></i>
+            <a href="" class="text-decoration-none text-dark">Creative Designing</a>
+          </li>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-solid fa-code"></i>
+            <a href="" class="text-decoration-none text-dark">Machine Learning</a>
+          </li>
+          <li class="d-flex gap-2 align-items-center py-sm-2 px-1">
+            <i class="fa-solid fa-computer"></i>
+            <a href="" class="text-decoration-none text-dark">Web Development</a>
+          </li>
+         </ul>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" data-bs-scroll="true">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      ...
+    </div>
+  </div>
+  <main>
+    <div class="wrapper background-tonal-primary">
+        <div class="container">
+         <div class="row">
+          <div class="col-sm-6 py-2">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-items"><a href="index.html" class="text-decoration-none text-color-dark font-weight-bold">Information Technology<span class="px-sm-1">&gt;</span></a></li>
+                  <li class="breadcrumb-items"><a href="infotech.html"" class="text-decoration-none text-color-dark font-weight-bold">Web Development<span class="px-sm-1">&gt;</span></a></li>
+                  <li class="breadcrumb-items"><a href="#"" class="text-decoration-none text-color-dark font-weight-bold">Javascript</a></li>
+                </ol>
+              </nav>
+            <div class="advertise-title d-flex flex-column py-3 justify-content-center">
+               <h4 class="font-size-34 font-weight-bold">Web Development Mastery: Learn how to code from Novice to Pro</h4>
+               <p class="text-muted">Unlock the secrets of Web Development Mastery! Master coding from a beginner to an expert level with our comprehensive program.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 py-2 d-flex justify-content-center">
+            <div class="sell-course-card border  background-dark d-flex justify-content-end">
+                <div class="d-flex p-1 flex-column">
+                    <div class="card-cover"><img src="./src/image/web-cover.jpg" alt="web-image" class="card-image"></div>
+                    <div class="card-description py-1">
+                        <h5 class="font-weight-bold text-white">Buy this course for as low as ₱999</h5>
+                        <div>
+                            <span class="font-size-16 text-decoration-line-through text-white">₱4,790</span>
+                            <span class="font-size-16 text-decoration-line-through text-white">79% off</span>
+                        </div>
+                        <div class="button-cart mt-1 d-flex gap-5"></div>
+                        <button class="btn btn-primary rounded-0">Add to cart</button>
+                        <button class="btn btn-outline-light rounded-0">Buy now</button>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+        </div>
+</div>
+</div>
+
+
+    <section id="learn-section">
+        <div class="container">
+        <div class="p-2 border mt-3">
+          <h5 class="font-weight-bold">What you'll learn</h5>
+          <div class="row">
+            <div class="col">
+                <ul class="list-unstyled d-flex flex-column gap-3">
+                    <li><i class="fa-solid fa-check pr-1 text-danger"></i>HTML: Learn to structure web pages using HTML tags and elements.</li>
+                    <li><i class="fa-solid fa-check pr-1 text-danger"></i>CSS: Master the art of styling and designing web pages with CSS.</li>
+                    <li><i class="fa-solid fa-check pr-1 text-danger"></i>JavaScript: Acquire skills in dynamic web development through JavaScript programming.</li>
+                    <li><i class="fa-solid fa-check pr-1 text-danger"></i>Front-End Development: Discover the essentials of front-end frameworks like React or Angular.</li>
+                    <li><i class="fa-solid fa-check pr-1 text-danger"></i>Back-End Development: Dive into server-side programming with languages like Python, Ruby, or Node.js.</li>
+                  </ul>
+            </div>
+            <div class="col">
+                <ul class="list-unstyled d-flex flex-column gap-3">
+                    <li><i class="fa-solid fa-check pr-1 text-danger"></i>Databases: Understand how to work with databases and integrate them into your web applications.</li>
+                    <li><i class="fa-solid fa-check pr-1 text-danger"></i>Responsive Design: Create mobile-friendly and responsive websites that adapt to different devices.</li>
+                    <li><i class="fa-solid fa-check pr-1 text-danger"></i>Web Performance Optimization: Learn techniques to optimize website speed and performance.</li>
+                    <li><i class="fa-solid fa-check pr-1 text-danger"></i>Version Control: Explore Git and learn how to collaborate effectively on web development projects.</li>
+                    <li><i class="fa-solid fa-check pr-1 text-danger"></i>Deployment and Hosting: Discover various methods to deploy and host your web applications.</li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="lessons" class="py-3">
+        <div class="container">
+        <h4 class="font-weight-bold">Lessons</h4>
+        <small class="text-muted mt-3">23 sections • 155 lectures • 22h 13m total length</small>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex justify-content-between">
+                <button class="accordion-button font-weight-bold"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Introduction to HTML: Understand the role of HTML in web development and its structure.
+                    <!-- <span class="d-flex gap-2 ml-10 hide-span">
+                        <small class="text-muted">5 lectures</small>
+                        <small class="text-muted">19mins</small>
+                    </span> -->
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <ul class="list-unstyled px-1 d-flex flex-column gap-3">
+                    <li>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                            <i class="fa-solid fa-tv pr-1"></i>
+                            <small class="font-size-16">Introduction to HTML</small>
+                        </div>
+                            <small>00:44</small>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                            <i class="fa-solid fa-tv pr-1"></i>
+                            <small class="font-size-16">HTML Tags and Attributes</small>
+                        </div>
+                            <small>02:00</small>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                            <i class="fa-solid fa-tv pr-1"></i>
+                            <small class="font-size-16">Document Structure</small>
+                        </div>
+                            <small>05:02</small>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                            <i class="fa-solid fa-tv pr-1"></i>
+                            <small class="font-size-16">Hyperlinks and Navigation</small>
+                        </div>
+                            <small>03:00</small>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                            <i class="fa-solid fa-tv pr-1"></i>
+                            <small class="font-size-16">Tables</small>
+                        </div>
+                            <small>01:45</small>
+                        </div>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header ">
+                <button class="accordion-button collapsed font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    CSS: Master the art of styling and designing web pages with CSS.
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                    <ul class="list-unstyled px-1 d-flex flex-column gap-3">
+                        <li>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                <i class="fa-solid fa-tv pr-1"></i>
+                                <small class="font-size-16">Introduction to CSS</small>
+                            </div>
+                                <small>00:44</small>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                <i class="fa-solid fa-tv pr-1"></i>
+                                <small class="font-size-16">Box Model: Understand how elements are structured with content, padding, borders, and margins.</small>
+                            </div>
+                                <small>00:44</small>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                <i class="fa-solid fa-tv pr-1"></i>
+                                <small class="font-size-16">Layout and Positioning: Learn techniques to control the placement and arrangement of elements on the page.</small>
+                            </div>
+                                <small>00:44</small>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                <i class="fa-solid fa-tv pr-1"></i>
+                                <small class="font-size-16">Responsive Design: Discover methods to create flexible and adaptive layouts for different screen sizes.</small>
+                            </div>
+                                <small>00:44</small>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                <i class="fa-solid fa-tv pr-1"></i>
+                                <small class="font-size-16">Transitions and Animations: Add smooth transitions and captivating animations to elements on your page.</small>
+                            </div>
+                                <small>00:44</small>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    JavaScript: Acquire skills in dynamic web development through JavaScript programming.
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul class="list-unstyled px-1 d-flex flex-column gap-3">
+                        <li>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                <i class="fa-solid fa-tv pr-1"></i>
+                                <small class="font-size-16">Introduction to CSS</small>
+                            </div>
+                                <small>00:44</small>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                <i class="fa-solid fa-tv pr-1"></i>
+                                <small class="font-size-16">Box Model: Understand how elements are structured with content, padding, borders, and margins.</small>
+                            </div>
+                                <small>00:44</small>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                <i class="fa-solid fa-tv pr-1"></i>
+                                <small class="font-size-16">Layout and Positioning: Learn techniques to control the placement and arrangement of elements on the page.</small>
+                            </div>
+                                <small>00:44</small>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                <i class="fa-solid fa-tv pr-1"></i>
+                                <small class="font-size-16">Responsive Design: Discover methods to create flexible and adaptive layouts for different screen sizes.</small>
+                            </div>
+                                <small>00:44</small>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                <i class="fa-solid fa-tv pr-1"></i>
+                                <small class="font-size-16">Transitions and Animations: Add smooth transitions and captivating animations to elements on your page.</small>
+                            </div>
+                                <small>00:44</small>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+    </section>
+
+    <section id="about" class="mb-1">
+        <div class="container">
+        <div >
+            <h4 class="mb-2 font-weight-bold">Requirements</h4>
+            <ul>
+                <li>Stable Internet Connection</li>
+                <li>Mobile Device or Laptop/Pc</li>
+            </ul>
+        </div>
+        <div>
+            
+         <div id="description" class="mt-2">
+            <h4 class="mb-1 font-weight-bold">Description</h4>
+          <div class="content px-1 py-1 border border-2">
+                <p>
+                    In our comprehensive web development lessons, you'll embark on an exciting journey to master the art of building dynamic
+                     and engaging websites. With a curriculum designed to equip you with the essential skills and knowledge,
+                     you'll learn the foundations of web development and progress towards advanced techniques.</p>
+               <p>
+                Starting with HTML, you'll understand how to structure web pages and create semantically meaningful content. Moving on to CSS, 
+                you'll dive into the world of styling, exploring layouts, responsiveness, and visual enhancements. 
+                Harnessing the power of JavaScript, you'll bring interactivity and dynamic functionality to your websites.
+                As you advance, you'll explore front-end frameworks like React or Angular, enabling 
+                you to build modern, scalable, and reusable user interfaces. Delving into back-end development, 
+                you'll learn to handle server-side programming using languages such as Python, Ruby, or Node.js, and work
+                with databases to store and retrieve data.
+               </p>
+               <p>
+                With a focus on responsive design, you'll ensure your websites adapt seamlessly to different devices and screen sizes.
+                 You'll optimize web performance, employing techniques to enhance speed and efficiency. Collaborative development workflows
+                 using version control systems like Git will also be covered, ensuring efficient teamwork and code management.
+                Moreover, you'll gain insights into deployment and hosting, discovering various methods to publish your web applications for the world to see.
+                 Throughout the lessons, you'll work on hands-on exercises and projects, honing your skills and building a solid portfolio of web development projects.
+                By the end of our web development lessons, you'll be well-equipped to create professional, feature-rich websites, 
+                and embark on a rewarding career as a web developer or pursue your entrepreneurial aspirations in the digital realm. So,
+                 join us and unlock the boundless possibilities of the web development world.
+               </p>
+               <a id="showMoreButton" onclick="toggleContent()" class="text-primary cursor-pointer">Show More</a>      
+              </div>        
+        </div>
+     </div>
+
+     <div class="instructor-container mt-2">
+        <h4 class="font-weight-bold">Instructor</h4>
+        <div class="intructor-card  border border-2 p-1">
+          <div class="row flex-column">
+            <div class="col d-flex flex-column">
+                <div>
+               <h4 class="font-weight-bold font-size-16 ">Chie Mendoza</h4>
+               <small class="text-muted">Head of Data Science at Pierian Training</small>
+            </div>
+            <div class="profile d-flex gap-3 mt-1">
+                <img src="./src/image/person-icon3.jpg" class="person-icon-2">
+                <div class="icons d-flex flex-column align-items-start justify-content-center gap-2">
+                    <div class="d-flex gap-3">
+                        <i class="fa-solid fa-star"></i>
+                        <small>4.6 Instructor Rating</small>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fa-solid fa-medal"></i>
+                        <small>1,000,324 Reviews</small>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fa-solid fa-users"></i>
+                        <small>2,000,022 Students</small>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <small>64 Lessons</small>
+                    </div>
+                    
+                    
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="content-instructor py-1">
+                    <p>
+                        Our web development course is taught by a highly experienced and knowledgeable instructor who is passionate about sharing their 
+                        expertise with aspiring web developers. With a strong background in web development 
+                        and a deep understanding of industry trends, our instructor brings real-world insights and practical examples to the classroom.</p>
+                        <p>Our instructor has a proven track record of success in the field, having worked on numerous web development projects and collaborated with
+                             diverse clients. 
+                            They have honed their skills over the years, mastering various web technologies and staying updated with the latest advancements in the industry.</p>
+                            <p>Beyond technical expertise, our instructor possesses excellent teaching abilities. They have a natural talent for explaining complex 
+                                concepts in a clear and concise manner, making the learning process enjoyable and accessible for students of 
+                                all levels. They foster a supportive and inclusive learning environment, encouraging questions, discussions, and hands-on practice.</p>
+                
+                   <a id="showMoreDetails" onclick="toggleInstructor()" class="text-primary cursor-pointer">Show More</a>      
+                  </div>        
+            </div>
+            </div>
+          </div>
+        </div>
+     </div>
+    </div>
+    </section>
+    
+  <section id="review-section">
+    <div class="container">
+       <div class="feedback-cards d-grid grid-row-4 gap-2 mt-4">
+        
+        <div class="feedback-card p-1 border rounded-3 bg-secondary">
+          <div class="card-header d-flex font-size-10 text-white gap-2">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div> 
+          <div class="card-body d-flex flex-column">
+            <small class="text-white mt-1">2 days ago</small>
+            <p class=" text-white font-size-14">
+              Your Learning Management System is impressive, providing a user-friendly interface, 
+              smooth navigation, and seamless course enrollment. It greatly enhances the learning experience for students.</p>
+          </div>
+          <div class="card-footer">
+            <p class="text-white">- John Doe</p>
+          </div>
+        </div>
+        <div class="feedback-card p-1 border rounded-3 bg-secondary">
+          <div class="card-header d-flex font-size-10 text-white gap-2">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div> 
+          <div class="card-body d-flex flex-column">
+            <small class="text-white mt-1">2 days ago</small>
+            <p class=" text-white font-size-14">
+              Your Learning Management System is impressive, providing a user-friendly interface, 
+              smooth navigation, and seamless course enrollment. It greatly enhances the learning experience for students.</p>
+          </div>
+          <div class="card-footer">
+            <p class="text-white">- John Doe</p>
+          </div>
+        </div>
+
+        <div class="feedback-card p-1 border rounded-3 bg-secondary">
+          <div class="card-header d-flex font-size-10 text-white gap-2">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div> 
+          <div class="card-body d-flex flex-column">
+            <small class="text-white mt-1">2 days ago</small>
+            <p class=" text-white font-size-14">
+              Your Learning Management System is impressive, providing a user-friendly interface, 
+              smooth navigation, and seamless course enrollment. It greatly enhances the learning experience for students.</p>
+          </div>
+          <div class="card-footer">
+            <p class="text-white">- John Doe</p>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+    </section>
+
+    <section id="suggested-course" class="mt-4">
+      <div class="container">
+        <h4 class="font-weight-bold mb-2">More Courses by Chie Mendoza</h4>
+        <div class="cards  d-grid grid-row-5 align-content-center justify-content-evenly">
+          <div class="card-course d-flex flex-column mb-1">
+            <div class="card-header ">
+              <img src="./src/image/card-1.png">
+            </div>
+            <div class="card-body">
+              <p class="title font-weight-semibold">Mobile app Development 2023 Full crash course</p>
+              <small class="text-muted">Dianne Ong</small>
+              <div >
+                <span class="text-muted">4.5</span>
+                <span class="text-primary">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-alt"></i>
+              </span>
+                <span class="text-muted">(2,001)</span>
+              </div>
+            </div>
+            <div class="card-footer border-0">
+               <button class="btn btn-primary">Start now</button>
+            </div>
+          </div>
+
+          <div class="card-course d-flex flex-column mb-1">
+           <div class="card-header ">
+             <img src="./src/image/card-1.png">
+           </div>
+           <div class="card-body">
+             <p class="title font-weight-semibold">Mobile app Development 2023 Full crash course</p>
+             <small class="text-muted">Dianne Ong</small>
+             <div >
+               <span class="text-muted">4.5</span>
+               <span class="text-primary">
+               <i class="fa-solid fa-star"></i>
+               <i class="fa-solid fa-star"></i>
+               <i class="fa-solid fa-star"></i>
+               <i class="fa-solid fa-star"></i>
+               <i class="fa-solid fa-star-half-alt"></i>
+             </span>
+               <span class="text-muted">(2,001)</span>
+             </div>
+           </div>
+           <div class="card-footer border-0">
+              <button class="btn btn-primary">Start now</button>
+           </div>
+         </div>
+
+         <div class="card-course d-flex flex-column mb-1">
+           <div class="card-header ">
+             <img src="./src/image/card-1.png">
+           </div>
+           <div class="card-body">
+             <p class="title font-weight-semibold">Mobile app Development 2023 Full crash course</p>
+             <small class="text-muted">Dianne Ong</small>
+             <div >
+               <span class="text-muted">4.5</span>
+               <span class="text-primary">
+               <i class="fa-solid fa-star"></i>
+               <i class="fa-solid fa-star"></i>
+               <i class="fa-solid fa-star"></i>
+               <i class="fa-solid fa-star"></i>
+               <i class="fa-solid fa-star-half-alt"></i>
+             </span>
+               <span class="text-muted">(2,001)</span>
+             </div>
+           </div>
+           <div class="card-footer border-0">
+              <button class="btn btn-primary">Start now</button>
+           </div>
+         </div>
+
+         <div class="card-course d-flex flex-column mb-1">
+           <div class="card-header ">
+             <img src="./src/image/card-1.png">
+           </div>
+           <div class="card-body">
+             <p class="title font-weight-semibold">Mobile app Development 2023 Full crash course</p>
+             <small class="text-muted">Dianne Ong</small>
+             <div >
+               <span class="text-muted">4.5</span>
+               <span class="text-primary">
+               <i class="fa-solid fa-star"></i>
+               <i class="fa-solid fa-star"></i>
+               <i class="fa-solid fa-star"></i>
+               <i class="fa-solid fa-star"></i>
+               <i class="fa-solid fa-star-half-alt"></i>
+             </span>
+               <span class="text-muted">(2,001)</span>
+             </div>
+           </div>
+           <div class="card-footer border-0">
+              <button class="btn btn-primary">Start now</button>
+           </div>
+         </div>
+          </div>
+      </div>
+    </section>
+    </main>
+
+    <script src="./src/js/app.js"></script>
+    <script src="./src/sass/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+ </body>
+ </html>
